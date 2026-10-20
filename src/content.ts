@@ -33,7 +33,7 @@ export const about = {
   eyebrow: 'About',
   headline: 'Building with Cursor. Shipping real apps.',
   body: [
-    'Ezekiel builds full-stack and frontend products — family heritage tools, local business sites, and narrative platforms. Recent work includes Buganda Heritage (shipped with Cursor), Will-mar’s, and a Documental geo-narrative site.',
+    'Ezekiel builds full-stack and frontend products — family lineage tools, local business sites, and narrative platforms. Recent work includes Buganda Heritage (shipped with Cursor), Family Tree Explorer, Will-mar’s, and a Documental geo-narrative site.',
     'Based in Kampala and working remote. Open to collaborations that need a clear product voice and hands-on implementation.',
   ],
   highlights: [
@@ -75,6 +75,22 @@ export const projects: Project[] = [
     },
     href: 'https://github.com/zacman-ug/BUGANDA',
     repoUrl: 'https://github.com/zacman-ug/BUGANDA',
+    placeholder: false,
+  },
+  {
+    id: 'family-tree',
+    title: 'Family Tree Explorer',
+    year: '2026',
+    tags: ['Full-stack', 'React', 'MySQL'],
+    summary:
+      'An earlier family-tree app with auth, member profiles, and an interactive d3 tree view — Express API on MySQL, distinct from the later Buganda Heritage build.',
+    note: 'React, Vite, Tailwind, react-d3-tree · Express, MySQL, JWT · Role: builder / full-stack',
+    image: {
+      src: '/projects/family-tree.png',
+      alt: 'Abstract cover for Family Tree Explorer — teal node tree on slate',
+    },
+    href: 'https://github.com/zacman-ug/Family_Tree',
+    repoUrl: 'https://github.com/zacman-ug/Family_Tree',
     placeholder: false,
   },
   {
