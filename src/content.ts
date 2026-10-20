@@ -1,26 +1,25 @@
 /**
- * PORTFOLIO CONTENT — edit this file to swap placeholders for real copy.
- * Anything marked PLACEHOLDER is temporary and meant to be replaced.
+ * PORTFOLIO CONTENT — edit this file to update copy, links, and project media.
+ * Fields still marked PLACEHOLDER await personal details from Ezekiel.
  */
 
 export const site = {
   name: 'Ezekiel Kigozi',
   shortName: 'Ezekiel',
-  /** PLACEHOLDER role — replace with real title */
-  role: 'Product Designer & Builder',
+  /** PLACEHOLDER role — refine when ready */
+  role: 'Builder & Frontend Developer',
   email: 'hello@ezekielkigozi.com', // PLACEHOLDER email
   location: 'Kampala · Remote', // PLACEHOLDER location
   social: {
-    github: 'https://github.com/', // PLACEHOLDER
+    github: 'https://github.com/zacman-ug',
     linkedin: 'https://linkedin.com/in/', // PLACEHOLDER
     twitter: 'https://x.com/', // PLACEHOLDER
   },
 } as const
 
 export const hero = {
-  /** One short supporting sentence under the name */
   lede:
-    'I design and ship calm, precise digital products — from first sketch to production.', // PLACEHOLDER
+    'I design and ship digital products — heritage tools, local business sites, and narrative platforms.',
   ctaPrimary: { label: 'View work', href: '#work' },
   ctaSecondary: { label: 'Get in touch', href: '#contact' },
   /** PLACEHOLDER hero image — replace with a real portrait or workspace photo */
@@ -32,15 +31,14 @@ export const hero = {
 
 export const about = {
   eyebrow: 'About',
-  headline: 'Craft over clutter. Clarity over noise.',
+  headline: 'Building with Cursor. Shipping real apps.',
   body: [
-    // PLACEHOLDER bio paragraphs
-    'Ezekiel is a product designer and builder focused on interfaces that feel inevitable — quiet systems, sharp typography, and experiences that respect people’s time.',
-    'Currently exploring tools for creative teams and civic-minded products. Previously collaborated with startups and studios across East Africa and remote-first teams worldwide.',
+    'Ezekiel builds full-stack and frontend products — family heritage tools, local business sites, and narrative platforms. Recent work includes Buganda Heritage (shipped with Cursor), Will-mar’s, and a Documental geo-narrative site.',
+    'Based in Kampala and working remote. Open to collaborations that need a clear product voice and hands-on implementation.',
   ],
   highlights: [
-    { label: 'Focus', value: 'Product design · Frontend' }, // PLACEHOLDER
-    { label: 'Open to', value: 'Select freelance & full-time' }, // PLACEHOLDER
+    { label: 'Focus', value: 'Full-stack · Frontend · Product' },
+    { label: 'Open to', value: 'Select freelance & full-time' }, // PLACEHOLDER intent
     { label: 'Based', value: site.location },
   ],
 } as const
@@ -51,60 +49,73 @@ export type Project = {
   year: string
   tags: string[]
   summary: string
-  /** PLACEHOLDER image URLs until real project shots are ready */
+  /** Role / tech note shown under the summary */
+  note?: string
   image: { src: string; alt: string }
-  href?: string
-  placeholder: true
+  /** Primary link (prefer live demo, else repo) */
+  href: string
+  repoUrl?: string
+  liveUrl?: string
+  /** True only when media is still stock / not a real product shot */
+  placeholder: boolean
 }
 
 export const projects: Project[] = [
   {
-    id: 'atlas',
-    title: 'Atlas Ledger',
-    year: '2025',
-    tags: ['Fintech', 'Design system'],
+    id: 'buganda',
+    title: 'Buganda Heritage',
+    year: '2026',
+    tags: ['Full-stack', 'React', 'PostgreSQL'],
     summary:
-      'A calm accounting dashboard for small businesses — clearer cash flow, fewer tabs.',
+      'A lineage and heritage app for Buganda families — 55 clans, totems, generational trees, photo uploads, and heritage visualizations.',
+    note: 'Built with Cursor · React, Vite, Express, Prisma, PostgreSQL · Role: builder / full-stack',
     image: {
-      src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80',
-      alt: 'PLACEHOLDER: analytics dashboard on a desk',
+      src: '/projects/buganda.png',
+      alt: 'Abstract cover for Buganda Heritage — clan rings and lineage motif',
     },
-    href: '#contact',
-    placeholder: true,
+    href: 'https://github.com/zacman-ug/BUGANDA',
+    repoUrl: 'https://github.com/zacman-ug/BUGANDA',
+    placeholder: false,
   },
   {
-    id: 'harbor',
-    title: 'Harbor Notes',
-    year: '2024',
-    tags: ['Productivity', 'Mobile'],
+    id: 'will-mars',
+    title: 'Will-mar’s',
+    year: '2026',
+    tags: ['React', 'Vite', 'Tailwind'],
     summary:
-      'A note app that stays out of the way — structured capture with a paper-like reading mode.',
+      'Marketing site for Will-mar’s — menu, gallery, location, and WhatsApp / Glovo actions for a Kampala food and cocktails spot.',
+    note: 'React + Vite + Tailwind · Role: frontend · Live Vercel deploy was configured; currently offline',
     image: {
-      src: 'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1600&q=80',
-      alt: 'PLACEHOLDER: notebook and pen on a wooden table',
+      src: '/projects/will-mars.png',
+      alt: 'Abstract cover for Will-mar’s — amber accent on dark zinc',
     },
-    href: '#contact',
-    placeholder: true,
+    href: 'https://github.com/zacman-ug/will-mars-web',
+    repoUrl: 'https://github.com/zacman-ug/will-mars-web',
+    // Homepage was https://will-mars-web.vercel.app but returns DEPLOYMENT_NOT_FOUND
+    placeholder: false,
   },
   {
-    id: 'kiln',
-    title: 'Kiln Studio',
-    year: '2024',
-    tags: ['Brand', 'Web'],
+    id: 'me-documental',
+    title: 'Me Documental',
+    year: '2026',
+    tags: ['Astro', 'Geo-narrative', 'Template'],
     summary:
-      'Identity and site for a ceramics studio — earthy materials, generous whitespace, shop-ready.',
+      'A Documental-based geo-narrative site — maps, timelines, and visual storytelling blocks, deployed on GitHub Pages.',
+    note: 'Astro + Documental template · Role: site builder · Live demo available',
     image: {
-      src: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1600&q=80',
-      alt: 'PLACEHOLDER: handmade ceramic vessels',
+      src: '/projects/documental.png',
+      alt: 'Abstract cover for Me Documental — map path on blue field',
     },
-    href: '#contact',
-    placeholder: true,
+    href: 'https://zacman-ug.github.io/Me-Documental/',
+    repoUrl: 'https://github.com/zacman-ug/Me-Documental',
+    liveUrl: 'https://zacman-ug.github.io/Me-Documental/',
+    placeholder: false,
   },
 ]
 
 export const work = {
   eyebrow: 'Selected work',
-  headline: 'Recent projects worth a closer look.',
+  headline: 'Real projects from the zacman-ug repos.',
 } as const
 
 export const contact = {

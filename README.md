@@ -41,10 +41,10 @@ Replace anything marked `PLACEHOLDER` with real bio, role, projects, email, and 
 
 | Real | Placeholder (swap later) |
 |------|--------------------------|
-| Name: Ezekiel Kigozi | Role, bio, location |
-| Site structure & design | Email & social URLs |
-| | Project titles, summaries, Unsplash images |
-| | “Placeholder” badges on project media |
+| Name: Ezekiel Kigozi | Email, LinkedIn, X |
+| GitHub: [zacman-ug](https://github.com/zacman-ug) | Hero workspace photo |
+| Work: Buganda Heritage, Will-mar’s, Me Documental | Location / “open to” intent |
+| Site structure & design | |
 
 ## Stack
 

@@ -1,4 +1,4 @@
-import { projects, work } from '../content'
+import { projects, work, type Project } from '../content'
 import { useReveal } from '../hooks/useReveal'
 
 export function Projects() {
@@ -21,16 +21,18 @@ export function Projects() {
   )
 }
 
-function ProjectRow({
-  project,
-}: {
-  project: (typeof projects)[number]
-}) {
+function ProjectRow({ project }: { project: Project }) {
   const ref = useReveal<HTMLLIElement>()
 
   return (
     <li className="project reveal" ref={ref}>
-      <div className="project__media">
+      <a
+        className="project__media"
+        href={project.href}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={`${project.title} — open`}
+      >
         <img
           src={project.image.src}
           alt={project.image.alt}
@@ -39,9 +41,9 @@ function ProjectRow({
           loading="lazy"
         />
         {project.placeholder && (
-          <span className="project__badge">Placeholder</span>
+          <span className="project__badge">Stock media</span>
         )}
-      </div>
+      </a>
       <div className="project__copy">
         <div className="project__meta">
           <span>{project.year}</span>
@@ -52,13 +54,24 @@ function ProjectRow({
           </ul>
         </div>
         <h3 className="project__title">
-          {project.href ? (
-            <a href={project.href}>{project.title}</a>
-          ) : (
-            project.title
-          )}
+          <a href={project.href} target="_blank" rel="noreferrer">
+            {project.title}
+          </a>
         </h3>
         <p className="project__summary">{project.summary}</p>
+        {project.note && <p className="project__note">{project.note}</p>}
+        <div className="project__links">
+          {project.liveUrl && (
+            <a href={project.liveUrl} target="_blank" rel="noreferrer">
+              Live demo
+            </a>
+          )}
+          {project.repoUrl && (
+            <a href={project.repoUrl} target="_blank" rel="noreferrer">
+              Repository
+            </a>
+          )}
+        </div>
       </div>
     </li>
   )

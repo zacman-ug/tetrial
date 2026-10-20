@@ -485,6 +485,37 @@ button {
   margin-top: 0.75rem;
 }
 
+.project__note {
+  margin-top: 0.65rem;
+  font-size: 0.875rem;
+  color: var(--ink-faint);
+  max-width: 34rem;
+}
+
+.project__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.35rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.project__links a {
+  color: var(--accent);
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.25s var(--ease-out);
+}
+
+.project__links a:hover {
+  border-color: var(--accent);
+}
+
+a.project__media {
+  display: block;
+  color: inherit;
+}
+
 /* ——— Contact ——— */
 .contact {
   border-top: 1px solid var(--line);
