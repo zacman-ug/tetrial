@@ -6,7 +6,6 @@
 export const site = {
   name: 'Ezekiel Kigozi',
   shortName: 'Ezekiel',
-  /** Prefer resume contact when syncing; portfolio email still TBD for public site */
   role: 'Software Developer',
   email: 'ez.kigozi@gmail.com',
   location: 'Kampala, Uganda',
@@ -19,7 +18,7 @@ export const site = {
 
 export const hero = {
   lede:
-    'I design and ship digital products — heritage tools, local business sites, and secure full-stack systems.',
+    'I design and ship digital products — heritage tools, HR platforms, and local business sites.',
   ctaPrimary: { label: 'View work', href: '#work' },
   ctaSecondary: { label: 'Get in touch', href: '#contact' },
   /** PLACEHOLDER hero image — replace with a real portrait or workspace photo */
@@ -33,7 +32,7 @@ export const about = {
   eyebrow: 'About',
   headline: 'Building with Cursor. Shipping real apps.',
   body: [
-    'Ezekiel is a software developer building full-stack and frontend products — including Buganda Heritage (shipped with Cursor) and Will-mar’s. He also works on secure, database-backed systems such as EFRIS integrations.',
+    'Ezekiel is a software developer building full-stack products — Buganda Heritage, an employee management platform, Chef Godwin’s catering site, and Will-mar’s. He also works on secure systems such as EFRIS integrations.',
     'Based in Kampala. Open to collaborations that need clear product thinking and hands-on implementation.',
   ],
   highlights: [
@@ -49,14 +48,11 @@ export type Project = {
   year: string
   tags: string[]
   summary: string
-  /** Role / tech note shown under the summary */
   note?: string
   image: { src: string; alt: string }
-  /** Primary link (prefer live demo, else repo) */
   href: string
   repoUrl?: string
   liveUrl?: string
-  /** True only when media is still stock / not a real product shot */
   placeholder: boolean
 }
 
@@ -75,6 +71,38 @@ export const projects: Project[] = [
     },
     href: 'https://github.com/zacman-ug/BUGANDA',
     repoUrl: 'https://github.com/zacman-ug/BUGANDA',
+    placeholder: false,
+  },
+  {
+    id: 'ems',
+    title: 'Employee Management System',
+    year: '2026',
+    tags: ['Full-stack', 'HR', 'PostgreSQL'],
+    summary:
+      'HR and operations platform organized by department and team — profiles, leave, attendance, Uganda payroll (PAYE/NSSF/LST), task workflows, department chat, and an offline-capable PWA.',
+    note: 'Built with Cursor · React, Vite, Tailwind, Dexie · Express, Prisma, Socket.io, PostgreSQL',
+    image: {
+      src: '/projects/ems.png',
+      alt: 'Abstract cover for Employee Management System — slate and sky panels',
+    },
+    href: 'https://github.com/zacman-ug/Employee-mgt',
+    repoUrl: 'https://github.com/zacman-ug/Employee-mgt',
+    placeholder: false,
+  },
+  {
+    id: 'chef-godwin',
+    title: 'Chef Godwin Foods & Kitchen',
+    year: '2026',
+    tags: ['Full-stack', 'React', 'Catering'],
+    summary:
+      'Full-stack site for Chef Godwin Marvin — event catering and cooking school in Kampala, with admin auth and PostgreSQL-backed content.',
+    note: 'Built with Cursor · React, Vite, Tailwind · Express, Prisma, PostgreSQL, JWT',
+    image: {
+      src: '/projects/chef-godwin.png',
+      alt: 'Abstract cover for Chef Godwin Foods — warm amber on stone',
+    },
+    href: 'https://github.com/zacman-ug/catering',
+    repoUrl: 'https://github.com/zacman-ug/catering',
     placeholder: false,
   },
   {
