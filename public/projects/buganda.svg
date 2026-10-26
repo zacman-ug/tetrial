@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a3a2c"/>
+      <stop offset="55%" stop-color="#2d5a45"/>
+      <stop offset="100%" stop-color="#c4a35a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#bg)"/>
+  <circle cx="1180" cy="280" r="220" fill="none" stroke="#e8ebe4" stroke-opacity="0.18" stroke-width="2"/>
+  <circle cx="1180" cy="280" r="140" fill="none" stroke="#e8ebe4" stroke-opacity="0.12" stroke-width="1.5"/>
+  <path d="M820 780 C820 520 980 380 1180 380 C1380 380 1540 520 1540 780" fill="none" stroke="#e8ebe4" stroke-opacity="0.22" stroke-width="2"/>
+  <path d="M940 780 C940 600 1040 480 1180 480 C1320 480 1420 600 1420 780" fill="none" stroke="#e8ebe4" stroke-opacity="0.16" stroke-width="1.5"/>
+  <text x="96" y="820" font-family="Georgia, serif" font-size="72" fill="#e8ebe4">Buganda Heritage</text>
+  <text x="96" y="890" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#e8ebe4" fill-opacity="0.7">55 clans - lineage - memory</text>
+</svg>
