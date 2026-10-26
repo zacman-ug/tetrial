@@ -43,7 +43,7 @@ Replace anything marked `PLACEHOLDER` with real bio, role, projects, email, and 
 |------|--------------------------|
 | Name: Ezekiel Kigozi | Email, LinkedIn, X |
 | GitHub: [zacman-ug](https://github.com/zacman-ug) | Hero workspace photo |
-| Work: Buganda Heritage, Family Tree Explorer, Will-mar’s, Me Documental | Location / “open to” intent |
+| Work: Buganda Heritage, Will-mar’s | “Open to” intent; LinkedIn/X |
 | Site structure & design | |
 
 ## Stack

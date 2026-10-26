@@ -6,10 +6,10 @@
 export const site = {
   name: 'Ezekiel Kigozi',
   shortName: 'Ezekiel',
-  /** PLACEHOLDER role — refine when ready */
-  role: 'Builder & Frontend Developer',
-  email: 'hello@ezekielkigozi.com', // PLACEHOLDER email
-  location: 'Kampala · Remote', // PLACEHOLDER location
+  /** Prefer resume contact when syncing; portfolio email still TBD for public site */
+  role: 'Software Developer',
+  email: 'ez.kigozi@gmail.com',
+  location: 'Kampala, Uganda',
   social: {
     github: 'https://github.com/zacman-ug',
     linkedin: 'https://linkedin.com/in/', // PLACEHOLDER
@@ -19,7 +19,7 @@ export const site = {
 
 export const hero = {
   lede:
-    'I design and ship digital products — heritage tools, local business sites, and narrative platforms.',
+    'I design and ship digital products — heritage tools, local business sites, and secure full-stack systems.',
   ctaPrimary: { label: 'View work', href: '#work' },
   ctaSecondary: { label: 'Get in touch', href: '#contact' },
   /** PLACEHOLDER hero image — replace with a real portrait or workspace photo */
@@ -33,11 +33,11 @@ export const about = {
   eyebrow: 'About',
   headline: 'Building with Cursor. Shipping real apps.',
   body: [
-    'Ezekiel builds full-stack and frontend products — family lineage tools, local business sites, and narrative platforms. Recent work includes Buganda Heritage (shipped with Cursor), Family Tree Explorer, Will-mar’s, and a Documental geo-narrative site.',
-    'Based in Kampala and working remote. Open to collaborations that need a clear product voice and hands-on implementation.',
+    'Ezekiel is a software developer building full-stack and frontend products — including Buganda Heritage (shipped with Cursor) and Will-mar’s. He also works on secure, database-backed systems such as EFRIS integrations.',
+    'Based in Kampala. Open to collaborations that need clear product thinking and hands-on implementation.',
   ],
   highlights: [
-    { label: 'Focus', value: 'Full-stack · Frontend · Product' },
+    { label: 'Focus', value: 'Full-stack · Frontend · APIs' },
     { label: 'Open to', value: 'Select freelance & full-time' }, // PLACEHOLDER intent
     { label: 'Based', value: site.location },
   ],
@@ -78,22 +78,6 @@ export const projects: Project[] = [
     placeholder: false,
   },
   {
-    id: 'family-tree',
-    title: 'Family Tree Explorer',
-    year: '2026',
-    tags: ['Full-stack', 'React', 'MySQL'],
-    summary:
-      'An earlier family-tree app with auth, member profiles, and an interactive d3 tree view — Express API on MySQL, distinct from the later Buganda Heritage build.',
-    note: 'React, Vite, Tailwind, react-d3-tree · Express, MySQL, JWT · Role: builder / full-stack',
-    image: {
-      src: '/projects/family-tree.png',
-      alt: 'Abstract cover for Family Tree Explorer — teal node tree on slate',
-    },
-    href: 'https://github.com/zacman-ug/Family_Tree',
-    repoUrl: 'https://github.com/zacman-ug/Family_Tree',
-    placeholder: false,
-  },
-  {
     id: 'will-mars',
     title: 'Will-mar’s',
     year: '2026',
@@ -107,36 +91,18 @@ export const projects: Project[] = [
     },
     href: 'https://github.com/zacman-ug/will-mars-web',
     repoUrl: 'https://github.com/zacman-ug/will-mars-web',
-    // Homepage was https://will-mars-web.vercel.app but returns DEPLOYMENT_NOT_FOUND
-    placeholder: false,
-  },
-  {
-    id: 'me-documental',
-    title: 'Me Documental',
-    year: '2026',
-    tags: ['Astro', 'Geo-narrative', 'Template'],
-    summary:
-      'A Documental-based geo-narrative site — maps, timelines, and visual storytelling blocks, deployed on GitHub Pages.',
-    note: 'Astro + Documental template · Role: site builder · Live demo available',
-    image: {
-      src: '/projects/documental.png',
-      alt: 'Abstract cover for Me Documental — map path on blue field',
-    },
-    href: 'https://zacman-ug.github.io/Me-Documental/',
-    repoUrl: 'https://github.com/zacman-ug/Me-Documental',
-    liveUrl: 'https://zacman-ug.github.io/Me-Documental/',
     placeholder: false,
   },
 ]
 
 export const work = {
   eyebrow: 'Selected work',
-  headline: 'Real projects from the zacman-ug repos.',
+  headline: 'Projects from the zacman-ug repos.',
 } as const
 
 export const contact = {
   eyebrow: 'Contact',
   headline: 'Let’s make something lasting.',
-  body: 'Have a product, brand, or interface that needs a clearer voice? Send a note — I usually reply within a few days.', // PLACEHOLDER
+  body: 'Have a product, brand, or interface that needs a clearer voice? Send a note — I usually reply within a few days.',
   ctaLabel: 'Email Ezekiel',
 } as const
